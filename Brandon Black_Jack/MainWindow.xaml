@@ -1,0 +1,124 @@
+﻿<Window x:Class="Brandon_Black_Jack.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Brandon_Black_Jack"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600" Background="ForestGreen">
+    <Grid>
+
+        <Label x:Name="RoundLabel" Content="Round" HorizontalAlignment="Left" Height="50" Margin="40,50,0,0" 
+               VerticalAlignment="Top" Width="100" FontSize="30"/>
+        <Label x:Name="BetLabel" Content="Current Bet" HorizontalAlignment="Left" Height="50" Margin="40,193,0,0" 
+               VerticalAlignment="Top" Width="160" FontSize="30"/>
+        <Label x:Name="MoneyLabel" Content="Player Money" HorizontalAlignment="Left" Height="50" Margin="40,345,0,0" 
+               VerticalAlignment="Top" Width="200" FontSize="30"/>
+
+
+        <TextBlock x:Name="RoundCount" HorizontalAlignment="Left" Height="45" Margin="155,55,0,0" TextWrapping="Wrap" 
+               Text="0" VerticalAlignment="Top" Width="95" FontSize="30" TextAlignment="Left"/>
+        <TextBlock x:Name="BetAmount" HorizontalAlignment="Left" Margin="225,198,0,0" TextWrapping="Wrap" Text="0" 
+               VerticalAlignment="Top" Height="50" Width="125" FontSize="30" TextAlignment="Left"/>
+        <TextBlock x:Name="MoneyAmount" HorizontalAlignment="Left" Margin="240,350,0,0" TextWrapping="Wrap" Text="0" 
+               VerticalAlignment="Top" Height="50" Width="125" FontSize="30" TextAlignment="Left"/>
+
+
+        <Image x:Name="dealerCardImage1" HorizontalAlignment="Left" Height="220" Margin="595,75,0,0" VerticalAlignment="Top" Width="160"
+               Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage2" HorizontalAlignment="Left" Height="220" Margin="785,75,0,0" VerticalAlignment="Top" Width="160"
+               Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage3" HorizontalAlignment="Left" Height="220" Margin="975,75,0,0" VerticalAlignment="Top" Width="160"
+               Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage4" HorizontalAlignment="Left" Height="65" Margin="1145,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png" RenderTransformOrigin="0.711,0.566"/>
+        <Image x:Name="dealerCardImage5" HorizontalAlignment="Left" Height="65" Margin="1195,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage6" HorizontalAlignment="Left" Height="65" Margin="1245,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage7" HorizontalAlignment="Left" Height="65" Margin="1295,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage8" HorizontalAlignment="Left" Height="65" Margin="1345,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage9" HorizontalAlignment="Left" Height="65" Margin="1395,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage10" HorizontalAlignment="Left" Height="65" Margin="1445,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage11" HorizontalAlignment="Left" Height="65" Margin="1495,150,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+        <Image x:Name="dealerCardImage12" HorizontalAlignment="Left" Height="65" Margin="1549,150,-0.4,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-red.png"/>
+
+
+        <Image x:Name="playerCardImage1" HorizontalAlignment="Left" Height="225" Margin="975,575,0,0" VerticalAlignment="Top" Width="160"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage2" HorizontalAlignment="Left" Height="225" Margin="785,575,0,0" VerticalAlignment="Top" Width="160"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage3" HorizontalAlignment="Left" Height="225" Margin="595,575,0,0" VerticalAlignment="Top" Width="160"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage4" HorizontalAlignment="Left" Height="65" Margin="1145,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage5" HorizontalAlignment="Left" Height="65" Margin="1195,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage6" HorizontalAlignment="Left" Height="65" Margin="1345,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage7" HorizontalAlignment="Left" Height="65" Margin="1495,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage8" HorizontalAlignment="Left" Height="65" Margin="1395,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png" RenderTransformOrigin="17.547,2.597"/>
+        <Image x:Name="playerCardImage9" HorizontalAlignment="Left" Height="65" Margin="1549,661,-0.4,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png" RenderTransformOrigin="0.391,-0.068"/>
+        <Image x:Name="playerCardImage10" HorizontalAlignment="Left" Height="65" Margin="1245,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage11" HorizontalAlignment="Left" Height="65" Margin="1295,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png"/>
+        <Image x:Name="playerCardImage12" HorizontalAlignment="Left" Height="65" Margin="1445,661,0,0" VerticalAlignment="Top" Width="45"
+            Source="cards/Card-backs-grid-blue.png" RenderTransformOrigin="-1.227,1.108"/>
+
+
+        <Button x:Name="standButton" Content="Stand" HorizontalAlignment="Left" Margin="40,497,0,0" 
+                VerticalAlignment="Top" Width="260" Height="70" FontSize="30" Click="standClick" Background="#FFDDDDDD"/>
+        <Button x:Name="hitButton" Content="Hit" HorizontalAlignment="Left" Margin="40,621,0,0" 
+                VerticalAlignment="Top" Width="260" Height="70" FontSize="30" Click="hitClick"/>
+        <Button x:Name="nextButton" Content="Next Round" HorizontalAlignment="Left" Margin="40,733,0,0" 
+                VerticalAlignment="Top" Width="260" Height="70" FontSize="30" Click="nextClick"/>
+
+
+        <Label x:Name="DeckLabel" Content="# of Decks" HorizontalAlignment="Left" Margin="1210,317,0,0" VerticalAlignment="Top" 
+            Height="47" Width="150" FontSize="30"/>
+        <TextBlock x:Name="DeckCount" HorizontalAlignment="Left" Margin="1370,322,0,0" TextWrapping="Wrap" Text="0" 
+            VerticalAlignment="Top" Height="50" Width="30" FontSize="30" TextAlignment="Left"/>
+        <ScrollBar x:Name="DeckScrollBar" HorizontalAlignment="Left" Margin="1430,325,0,0" VerticalAlignment="Top" Height="47" 
+            Width="30" Minimum="1" Maximum="8"  Value="1"  Scroll="DeckScroll" SmallChange="1" RenderTransformOrigin="-3.108,2.451">
+            <ScrollBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform X="216.48" Y="-183.394"/>
+                </TransformGroup>
+            </ScrollBar.RenderTransform>
+        </ScrollBar>
+        <Label x:Name="BetChangeLabel" Content="Next Bet" HorizontalAlignment="Left" Margin="1210,404,0,0" VerticalAlignment="Top" 
+               Height="47" Width="130" FontSize="30"/>
+        <TextBlock x:Name="NextBetAmount" HorizontalAlignment="Left" Margin="1370,409,0,0" TextWrapping="Wrap" Text="0" 
+            VerticalAlignment="Top" Height="50" Width="70" FontSize="30" TextAlignment="Left"/>
+        <ScrollBar x:Name="BetScrollBar" HorizontalAlignment="Left" Margin="1430,410,0,0" VerticalAlignment="Top" Height="47" 
+                   Width="30" Minimum="1" Maximum="99"  Value="1"  Scroll="BetScroll" SmallChange="1" RenderTransformOrigin="0.5,0.5">
+            <ScrollBar.RenderTransform>
+                <RotateTransform Angle="180"/>
+            </ScrollBar.RenderTransform>
+        </ScrollBar>
+        <Label x:Name="ScoreLabel" Content="Player Score" HorizontalAlignment="Left" Height="50" Margin="1210,490,0,0" 
+               VerticalAlignment="Top" Width="175" FontSize="30"/>
+        <TextBlock x:Name="ScoreCount" HorizontalAlignment="Left" Height="50" Margin="1385,495,0,0" TextWrapping="Wrap" 
+               Text="0" VerticalAlignment="Top" Width="145" FontSize="30" TextAlignment="Center"/>
+
+
+
+        <TextBlock x:Name="Notifications" HorizontalAlignment="Left" Margin="630,350,0,0" TextWrapping="Wrap" Text="Game Start" 
+                   VerticalAlignment="Top" Height="145" Width="505" FontSize="75" TextAlignment="Center"/>
+        <Button x:Name="DoubleBut" Content="Double" HorizontalAlignment="Left" Margin="1145,637,0,0" VerticalAlignment="Top" Width="75" Click="DoubleClick"/>
+        <Button x:Name="Split" Content="Split" HorizontalAlignment="Left" Margin="1145,733,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>
